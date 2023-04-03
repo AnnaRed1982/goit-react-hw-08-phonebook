@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContacts } from 'redux/auth/operations';
+import { deleteContacts } from 'redux/contacts/operations';
 
 import PropTypes from 'prop-types';
 import css from 'components/ContactItem/ContacItem.module.css';

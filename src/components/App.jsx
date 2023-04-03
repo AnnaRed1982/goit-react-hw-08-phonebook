@@ -6,8 +6,8 @@ import { Layout } from './Layout';
 import NotFound from './NotFound';
 
 import HomePage from '../pages/HomePage';
-// import Login from '../pages/HomePage';
-// import Register from '../pages/HomePage';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 // import Contacts from '../pages/HomePage';
 
 // import { fetchContacts } from 'redux/auth/operations';
@@ -30,6 +30,8 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

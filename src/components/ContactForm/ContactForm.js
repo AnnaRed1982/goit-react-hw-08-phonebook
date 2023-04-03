@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { addContacts } from 'redux/auth/operations';
-import { selectContacts } from 'redux/auth/selectors';
+import { addContacts } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 import PropTypes from 'prop-types';
 import css from 'components/ContactForm/ContactForm.module.css';
