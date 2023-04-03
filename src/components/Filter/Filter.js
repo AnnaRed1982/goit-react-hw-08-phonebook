@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
-import { selectFilter } from 'redux/selectors';
+import { setFilter } from 'redux/auth/filterSlice';
+import { selectFilter } from 'redux/auth/selectors';
 import PropTypes from 'prop-types';
 
 export const Filter = () => {
