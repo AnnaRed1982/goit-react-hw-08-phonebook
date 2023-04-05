@@ -1,5 +1,5 @@
-// import { useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
 import { Layout } from './Layout';
@@ -8,30 +8,28 @@ import NotFound from './NotFound';
 import HomePage from '../pages/HomePage';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
-// import Contacts from '../pages/HomePage';
+import Contacts from '../pages/Contacts';
 
-// import { fetchContacts } from 'redux/auth/operations';
-// import { selectIsLoading, selectError } from 'redux/auth/selectors';
-
-// import { ContactForm } from 'components/ContactForm/ContactForm';
-// import { ContactList } from 'components/ContactList/ContactList';
-// import { Filter } from 'components/Filter/Filter';
+import { refreshUser } from 'redux/auth/operations';
+import { useAuth } from 'hooks/useAuth';
 
 export const App = () => {
-  // const dispatch = useDispatch();
-  // const isLoading = useSelector(selectIsLoading);
-  // const error = useSelector(selectError);
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
-  return (
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
+        <Route path="contacts" element={<Contacts />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
@@ -65,12 +63,3 @@ export const App = () => {
 //     /> */}
 //   </Route>
 // </Routes>
-
-// <div>
-//   <h1>Phonebook</h1>
-//   {isLoading && !error && <b>Request in progress...</b>}
-//   <ContactForm />
-//   <h2>Contacts:</h2>
-//   <Filter />
-//   <ContactList />
-// </div>
