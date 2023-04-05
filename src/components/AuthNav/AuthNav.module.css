@@ -6,6 +6,10 @@
   color: #2a363b;
 }
 
-.link.active {
+.active {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
   color: #e84a5f;
 }

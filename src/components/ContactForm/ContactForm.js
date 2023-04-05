@@ -6,22 +6,22 @@ import PropTypes from 'prop-types';
 import css from 'components/ContactForm/ContactForm.module.css';
 
 export const ContactForm = () => {
-  // const contacts = useSelector(selectContacts);
-  // const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
+  const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const { name, number } = e.target.elements;
+    const { name, number } = e.target.elements;
 
-    // if (contacts.find(contact => contact.name === name.value)) {
-    //   alert(`${name.value} is already in contacts!`);
-    //   e.currentTarget.reset();
-    //   return;
-    // }
+    if (contacts.find(contact => contact.name === name.value)) {
+      alert(`${name.value} is already in contacts!`);
+      e.currentTarget.reset();
+      return;
+    }
 
-    // const data = { name: name.value, phone: number.value };
+    const data = { name: name.value, phone: number.value };
 
-    // dispatch(addContacts(data));
+    dispatch(addContacts(data));
     e.currentTarget.reset();
   };
 

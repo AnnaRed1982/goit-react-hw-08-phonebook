@@ -18,10 +18,10 @@ export const ContactList = () => {
 
   return (
     <ul>
-      {getVisibleContacts().map(({ id, name, phone }) => {
+      {getVisibleContacts().map(({ id, name, number }) => {
         return (
           <li key={id}>
-            <ContactItem id={id} name={name} number={phone} />
+            <ContactItem id={id} name={name} number={number} />
           </li>
         );
       })}

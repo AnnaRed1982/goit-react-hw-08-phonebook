@@ -7,11 +7,17 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <NavLink className={css.link} to="/">
+      <NavLink
+        className={({ isActive }) => (isActive ? css.active : css.link)}
+        to="/"
+      >
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink
+          className={({ isActive }) => (isActive ? css.active : css.link)}
+          to="/contacts"
+        >
           Contacts
         </NavLink>
       )}

@@ -27,23 +27,23 @@ export const contactsSlice = createSlice({
     });
     builder.addCase(fetchContacts.rejected, handleRejected);
 
-    // builder.addCase(addContacts.pending, handlePending);
-    // builder.addCase(addContacts.fulfilled, (state, action) => {
-    //   state.isLoading = false;
-    //   state.error = null;
-    //   state.items.push(action.payload);
-    // });
-    // builder.addCase(addContacts.rejected, handleRejected);
+    builder.addCase(addContacts.pending, handlePending);
+    builder.addCase(addContacts.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.error = null;
+      state.items.push(action.payload);
+    });
+    builder.addCase(addContacts.rejected, handleRejected);
 
-    // builder.addCase(deleteContacts.pending, handlePending);
-    // builder.addCase(deleteContacts.fulfilled, (state, action) => {
-    //   state.isLoading = false;
-    //   state.error = null;
-    //   state.items = state.items.filter(
-    //     contact => contact.id !== action.payload.id
-    //   );
-    // });
-    // builder.addCase(deleteContacts.rejected, handleRejected);
+    builder.addCase(deleteContacts.pending, handlePending);
+    builder.addCase(deleteContacts.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.error = null;
+      state.items = state.items.filter(
+        contact => contact.id !== action.payload.id
+      );
+    });
+    builder.addCase(deleteContacts.rejected, handleRejected);
   },
 });
 
