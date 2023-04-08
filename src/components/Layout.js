@@ -1,18 +1,20 @@
 import { Outlet } from 'react-router-dom';
-// import { Toaster } from 'react-hot-toast';
 import { AppBar } from './AppBar/AppBar';
-// import { Suspense } from 'react';
+import { Suspense } from 'react';
+
+import { Container } from '@mui/material';
 
 export const Layout = () => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
-      <header>
-        <AppBar />
-      </header>
-      <main>
+    <Container
+      sx={{
+        width: '700px',
+      }}
+    >
+      <AppBar />
+      <Suspense fallback={null}>
         <Outlet />
-      </main>
-      <footer></footer>
-    </div>
+      </Suspense>
+    </Container>
   );
 };

@@ -1,23 +1,38 @@
 import { useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/contacts/operations';
+import { Container, Button, Typography } from '@mui/material';
 
 import PropTypes from 'prop-types';
-import css from 'components/ContactItem/ContacItem.module.css';
+
 
 export const ContactItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
-
   const handleDelete = () => dispatch(deleteContacts(id));
 
   return (
-    <div className={css.item}>
-      <p>{name}:</p>
-      <p>{number}</p>
+    <Container
+      sx={{
+        display: 'flex',
+        borderRadius: 'none',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '5px',
+      }}
+    >
+      <Typography sx={{fontWeight: "700"}}>{name}:</Typography>
+      <Typography>{number}</Typography>
 
-      <button className={css.delete} type="button" onClick={handleDelete}>
+      <Button
+        variant="contained"
+        sx={{
+          padding: '0px',
+        }}
+        type="button"
+        onClick={handleDelete}
+      >
         Delete
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 };
 

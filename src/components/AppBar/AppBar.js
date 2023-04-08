@@ -2,15 +2,31 @@ import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../UserMenu/UserMenu';
 import { AuthNav } from '../AuthNav/AuthNav';
 import { useAuth } from '../../hooks/useAuth';
-import css from './AppBar.module.css';
+import { Container } from '@mui/material';
 
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <header className={css.header}>
+    <Container
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        borderRadius: 'none',
+        backgroundColor: 'gainsboro',
+      }}
+    >
       <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </header>
+      <Container
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          borderRadius: 'none',
+          backgroundColor: 'gainsboro',       
+        }}
+      >
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </Container>
+    </Container>
   );
 };

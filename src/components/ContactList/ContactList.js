@@ -2,6 +2,8 @@ import { useSelector } from 'react-redux';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import { selectContacts } from 'redux/contacts/selectors';
 import { selectFilter } from 'redux/contacts/selectors';
+import { Container } from '@mui/material';
+
 import PropTypes from 'prop-types';
 
 export const ContactList = () => {
@@ -18,13 +20,24 @@ export const ContactList = () => {
 
   return (
     <ul>
-      {getVisibleContacts().map(({ id, name, number }) => {
-        return (
-          <li key={id}>
-            <ContactItem id={id} name={name} number={number} />
-          </li>
-        );
-      })}
+      <Container
+        sx={{
+          display: 'flex',
+          flexDirection: "column",
+          borderRadius: 'none',
+          justifyContent: "center",
+          alignItems: "flex-start",
+          gap: "10px",
+        }}
+      >
+        {getVisibleContacts().map(({ id, name, number }) => {
+          return (
+            <li key={id}>
+              <ContactItem id={id} name={name} number={number} />
+            </li>
+          );
+        })}
+      </Container>
     </ul>
   );
 };
