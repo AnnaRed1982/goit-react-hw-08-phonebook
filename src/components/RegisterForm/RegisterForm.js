@@ -20,6 +20,11 @@ export const RegisterForm = () => {
       return alert('Fill in data');
     }
 
+    if (form.elements.password.value.length < 7) {
+      form.elements.password.value = '';
+      return alert('Password shoold be more than 7 symbols');
+    }
+
     dispatch(
       register({
         name: form.elements.name.value,
