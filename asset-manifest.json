@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.6b76b731.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.156b57dc.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.ffe9a2f9.js",
     "static/js/206.d4a2aca4.chunk.js": "/goit-react-hw-08-phonebook/static/js/206.d4a2aca4.chunk.js",
-    "static/js/139.ed56e7ac.chunk.js": "/goit-react-hw-08-phonebook/static/js/139.ed56e7ac.chunk.js",
+    "static/js/139.3159a7f0.chunk.js": "/goit-react-hw-08-phonebook/static/js/139.3159a7f0.chunk.js",
     "static/js/960.cf761ecd.chunk.js": "/goit-react-hw-08-phonebook/static/js/960.cf761ecd.chunk.js",
     "static/js/307.a4999f46.chunk.js": "/goit-react-hw-08-phonebook/static/js/307.a4999f46.chunk.js",
     "static/js/152.f820601f.chunk.js": "/goit-react-hw-08-phonebook/static/js/152.f820601f.chunk.js",
     "static/media/phone.webp": "/goit-react-hw-08-phonebook/static/media/phone.5d9df937c59dc5aa429c.webp",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.6b76b731.css.map": "/goit-react-hw-08-phonebook/static/css/main.6b76b731.css.map",
-    "main.156b57dc.js.map": "/goit-react-hw-08-phonebook/static/js/main.156b57dc.js.map",
+    "main.ffe9a2f9.js.map": "/goit-react-hw-08-phonebook/static/js/main.ffe9a2f9.js.map",
     "206.d4a2aca4.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/206.d4a2aca4.chunk.js.map",
-    "139.ed56e7ac.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/139.ed56e7ac.chunk.js.map",
+    "139.3159a7f0.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/139.3159a7f0.chunk.js.map",
     "960.cf761ecd.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/960.cf761ecd.chunk.js.map",
     "307.a4999f46.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/307.a4999f46.chunk.js.map",
     "152.f820601f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/152.f820601f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b76b731.css",
-    "static/js/main.156b57dc.js"
+    "static/js/main.ffe9a2f9.js"
   ]
 }
